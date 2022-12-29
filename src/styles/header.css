@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  height: 30px;
+  background-color: black;
+}
+
+header #logo {
+  align-self: center;
+  position: absolute;
+}
+
+header div {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  left: 50vh;
+  width: 30vh;
+}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+  height: 2000px;
+  text-align: center;
+}
+
+#main-img {
+  margin-top: 65px;
+  width: 1136px;
+}

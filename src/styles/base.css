@@ -2,16 +2,32 @@
   box-sizing: border-box;
   margin: 0;
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
 
 body {
-  background-color: black;
-  height: 2000px;
+  /* background-color: black; */
+  width: 100%;
+  border: 1px solid black;
   text-align: center;
 }
 
-#main-img {
-  margin-top: 65px;
-  width: 1136px;
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 0;
+}
+
+/* mobile first */
+
+@media screen and (min-width: 280px) and (max-width: 720px) {
+  .img-container {
+    width: 100%;
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+  }
 }

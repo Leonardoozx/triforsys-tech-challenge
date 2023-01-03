@@ -1,4 +1,4 @@
-const unycosData = async () => {
+const sliderData = async () => {
   // base url
   const URL = 'https://api.beta.unycos.com';
 
@@ -21,4 +21,4 @@ const unycosData = async () => {
   return spotlights;
 };
 
-export { unycosData };
+export { sliderData };

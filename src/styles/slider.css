@@ -1,0 +1,13 @@
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  height: 200px;
+}
+
+.slider img {
+  width: 200px;
+}
+
+.slider div {
+  margin: 8px;
+}

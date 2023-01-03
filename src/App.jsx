@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
+import NatacionResumeInfo from './components/NatacionResumeInfo';
+import OnlyMobileSection from './components/OnlyMobileSection';
 import Slider from './components/Slider';
 
 import './styles/base.css';
 
-function App() {
+export default function App() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (window.innerWidth < 720) return setIsMobile(true);
@@ -14,7 +16,7 @@ function App() {
   return (
     <main>
       <Header />
-      <article className="img-container">
+      <article className="main-img-container">
         <img
           src={
             isMobile
@@ -25,32 +27,29 @@ function App() {
         />
       </article>
 
-      <article>
-        <figure>
-          <img src="https://imgur.com/LXAdKit.png" alt="12 módulos" />
-          <figcaption>12 MÓDULOS</figcaption>
-        </figure>
+      <NatacionResumeInfo isMobile={isMobile} />
 
-        <figure>
-          <img src="https://imgur.com/djqTJbV.png" alt="+3.5 horas" />
-          <figcaption>+3.5 HORAS</figcaption>
-        </figure>
 
-        <button type="button">MAS INFORMACIÓN</button>
-      </article>
+      {!isMobile && (
+        <>
+          <h2>CONTENIDO EXCLUSIVO</h2>
+
+          <article>
+            <img src="https://imgur.com/e71xbjD.png" alt="book" />
+            <img src="https://imgur.com/BvZnyYY.png" alt="360" />
+            <img src="https://imgur.com/9GRWsvM.png" alt="check cards" />
+            <img src="https://imgur.com/Aa7aQA8.png" alt="pencil" />
+
+            <button>MAS INFROMACIÓN</button> 
+          </article>
+        </>
+      )}
+
+      {isMobile && <OnlyMobileSection />}
+
       <Slider />
-
-      <h2>CONTENIDO EXCLUSIVO</h2>
-
-      <article>
-        <img src="https://imgur.com/e71xbjD.png" alt="book" />
-        <img src="https://imgur.com/BvZnyYY.png" alt="360" />
-        <img src="https://imgur.com/9GRWsvM.png" alt="check cards" />
-        <img src="https://imgur.com/Aa7aQA8.png" alt="pencil" />
-
-        <button>MAS INFROMACIÓN</button>
-      </article>
-
+        
+      {!isMobile && (<>
       <h2>LESSON PLAN</h2>
 
       <div>
@@ -232,19 +231,16 @@ function App() {
 
       <article>
         {/* backgroud image */}
-        <article className="img-container">
+        {/* <article className="main-img-container">
         <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
-        </article>
+        </article> */}
         <h2>APRENDE COM LOS MEJORES</h2>
         <h3>DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.</h3>
         <h3>CONOCE EN NUESTRO BLOG.</h3>
       </article>
 
       <footer>
-          <img
-            src="https://imgur.com/VHl5C3y.png"
-            alt="unycos"
-          />
+        <img src="https://imgur.com/VHl5C3y.png" alt="unycos" />
         <div>
           <img src="https://imgur.com/E9uAFoz.png" alt="facebook" />
           <img src="https://imgur.com/h17xrVU.png" alt="instagram" />
@@ -263,8 +259,8 @@ function App() {
           <span> / EUR (€)</span>
         </div>
       </footer>
+      </>)}
     </main>
   );
 }
 
-export default App;

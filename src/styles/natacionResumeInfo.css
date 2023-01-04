@@ -1,0 +1,27 @@
+.natacion-resumme-container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 8px 25px 8px;
+}
+
+.natacion-resumme-container h3 {
+  order: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.natacion-resumme-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  order: 2;
+}
+
+.natacion-resumme-container button {
+  order: 3;
+}
+
+.natacion-resumme-container div figure {
+  margin: 20px 0;
+}

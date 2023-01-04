@@ -1,7 +1,6 @@
 .slider {
   display: flex;
   overflow-x: scroll;
-  height: 200px;
 }
 
 .slider img {
@@ -9,5 +8,5 @@
 }
 
 .slider div {
-  margin: 8px;
+  margin: 0 8px;
 }

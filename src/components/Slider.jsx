@@ -1,18 +1,31 @@
-import { useEffect } from "react";
-import { unycosData } from "../api/sliderData";
+import { useEffect, useState } from 'react';
 
-function SliderCard() {
+import { sliderData } from '../api/sliderData';
+
+import '../styles/slider.css';
+
+export default function Slider() {
+  const [images, setImages] = useState([]);
+
   useEffect(() => {
-    const opa = async () => {
-      console.log(await unycosData());
+    const getAllImages = async () => {
+      const allImages = await sliderData();
+      console.log(allImages);
+      setImages(allImages);
     };
-    opa();
-  });
+    getAllImages();
+  }, []);
+
   return (
-    <>
-      <div></div>
-    </>
+    <section className='slider'>
+      {images &&
+        images.map(({ order, image }) => (
+          <section key={order}>
+            <div>
+              <img src={image} alt="people in the pool" />
+            </div>
+          </section>
+        ))}
+    </section>
   );
 }
-
-export default SliderCard;

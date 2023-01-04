@@ -1,0 +1,35 @@
+footer .cards_width {
+  width: 40px;
+  margin: 0 5px;
+}
+
+footer hr {
+  background-color: rgb(29, 26, 5);
+  border: none;
+  padding: 1px;
+}
+
+footer .logo {
+  width: 90px;
+  height: 25px;
+}
+
+footer .footer_logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminos_y_condiciones {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer_logo_container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.cards_container {
+  margin: 10px 0;
+}

@@ -7,17 +7,31 @@ export default function NatacionResumeInfo({ isMobile }) {
     <section className="natacion-resumme-container">
       <div>
         <figure>
-          <img className='cards-width' src="https://imgur.com/LXAdKit.png" alt="12 módulos" />
+          <img
+            className="cards-width"
+            src="https://imgur.com/LXAdKit.png"
+            alt="12 módulos"
+          />
           <figcaption>12 MÓDULOS</figcaption>
         </figure>
 
         <figure>
-          <img className='cards-width' src="https://imgur.com/djqTJbV.png" alt="+3.5 horas" />
+          <img
+            className="cards-width"
+            src="https://imgur.com/djqTJbV.png"
+            alt="+3.5 horas"
+          />
           <figcaption>+3.5 HORAS</figcaption>
         </figure>
       </div>
 
-      <button type="button" className="btn">
+      <button
+        onClick={() =>
+          console.log(isMobile ? 'SOLICITAR INFORMACIÓN' : 'MAS INFORMACIÓN')
+        }
+        type="button"
+        className="btn"
+      >
         {isMobile ? 'SOLICITAR INFORMACIÓN' : 'MAS INFORMACIÓN'}
       </button>
 

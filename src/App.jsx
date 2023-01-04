@@ -78,7 +78,12 @@ export default function App() {
           </button>
         </div>
       </section>
-      <button className="btn bg-black">VER PROGRAMA COMPLETO</button>
+      <button
+        className="btn bg-black"
+        onClick={() => console.log('VER PROGRAMA COMPLETO')}
+      >
+        VER PROGRAMA COMPLETO
+      </button>
 
       <section className="classification">
         <div>
@@ -97,7 +102,6 @@ export default function App() {
           dinero.
         </p>
       </section>
-
 
       <Form />
 

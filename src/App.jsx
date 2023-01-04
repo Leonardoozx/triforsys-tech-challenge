@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
+
+import './styles/app.css';
+
 import Header from './components/Header';
 import NatacionResumeInfo from './components/NatacionResumeInfo';
 import OnlyMobileSection from './components/OnlyMobileSection';
 import Slider from './components/Slider';
-
-import './styles/base.css';
-import './styles/app.css';
 import Form from './components/Form';
+import UserComments from './components/UserComments';
+import MoreCourses from './components/MoreCourses';
+import RelatedArticles from './components/RelatedArticles';
+import Footer from './components/Footer';
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -79,7 +83,7 @@ export default function App() {
         </div>
       </section>
       <button
-        className="btn bg-black"
+        className="btn btn-bg-black"
         onClick={() => console.log('VER PROGRAMA COMPLETO')}
       >
         VER PROGRAMA COMPLETO
@@ -104,6 +108,12 @@ export default function App() {
       </section>
 
       <Form />
+
+      <UserComments />
+
+      <MoreCourses />
+
+      <RelatedArticles />
 
       {!isMobile && (
         <>
@@ -250,19 +260,16 @@ export default function App() {
           <article>
             <div>
               <h3>CONSEJOS PARA NADADORES PRINCIPIANTES</h3>
-              {/* date */}
               <p>22.06.2019</p>
             </div>
 
             <div>
               <h3>CONSEJOS PARA NADADORES PRINCIPIANTES</h3>
-              {/* date */}
               <p>22.06.2019</p>
             </div>
 
             <div>
               <h3>¿Nadar es un buen método para adelgazar?</h3>
-              {/* date */}
               <p>22.06.2019</p>
             </div>
 
@@ -270,19 +277,16 @@ export default function App() {
               <h3>
                 Recomendaciones para lograr que un niño venza el miedo al agua
               </h3>
-              {/* date */}
               <p>22.06.2019</p>
             </div>
 
             <div>
               <h3>Consejos para mejorar la técnica del estilo crol</h3>
-              {/* date */}
               <p>22.06.2019</p>
             </div>
 
             <div>
               <h3>Como venzer el miedo al agua</h3>
-              {/* date */}
               <p>22.06.2018</p>
             </div>
 
@@ -296,31 +300,11 @@ export default function App() {
         </article> */}
             <h2>APRENDE COM LOS MEJORES</h2>
             <h3>DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.</h3>
-            <h3>CONOCE EN NUESTRO BLOG.</h3>
+            <h3>CONOCE EN NUESTRO BLOG.</h3> 
           </article>
-
-          <footer>
-            <img src="https://imgur.com/VHl5C3y.png" alt="unycos" />
-            <div>
-              <img src="https://imgur.com/E9uAFoz.png" alt="facebook" />
-              <img src="https://imgur.com/h17xrVU.png" alt="instagram" />
-              <img src="https://imgur.com/oMIC6R6.png" alt="twitter" />
-              <img src="https://imgur.com/F1QgoMc.png" alt="youtube" />
-            </div>
-            <hr />
-            <div>
-              <p>Terminos y condiciones</p>
-              <p>Política de privacidad</p>
-              <p>Aviso legal</p>
-            </div>
-
-            <div>
-              <p>USD ($)</p>
-              <span> / EUR (€)</span>
-            </div>
-          </footer>
         </>
       )}
+      <Footer isMobile={isMobile} />
     </main>
   );
 }

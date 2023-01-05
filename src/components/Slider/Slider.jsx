@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { sliderData } from '../api/sliderData';
+import { sliderData } from '../../api/sliderData';
 
 import styles from '../styles/slider.module.css';
 

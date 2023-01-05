@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { moreCoursesData } from '../api/moreCoursesData.js';
+import { moreCoursesData } from '../../api/moreCoursesData.js';
 
 import styles from '../styles/moreCourses.module.css';
 

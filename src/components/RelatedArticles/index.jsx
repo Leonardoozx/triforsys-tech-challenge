@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-
-import { relatedArticlesData } from '../api/relatedArticlesData';
+../../hooks/useGenericState
+import { relatedArticlesData } from '../../api/relatedArticlesData';
 
 import styles from '../styles/relatedArticles.module.css';
 

@@ -1,5 +1,5 @@
-import styles from '../styles/form.module.css';
-import useGenericState from '../hooks/useGenericState';
+import styles from './form.module.css';
+import useGenericState from '../../hooks/useGenericState';
 
 export default function Form() {
   const INITIAL_STATE = {

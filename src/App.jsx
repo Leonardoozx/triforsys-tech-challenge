@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 import styles from './styles/app.module.css';
 
-import Header from './components/Header';
-import NatacionResumeInfo from './components/NatacionResumeInfo';
-import OnlyMobileSection from './components/OnlyMobileSection';
-import Slider from './components/Slider';
+import Header from './components/Header/Header';
+import NatacionResumeInfo from './components/NatacionResumeInfo/NatacionResumeInfo';
+import OnlyMobileSection from './components/OnlyMobileSection/OnlyMobileSection';
+import Slider from './components/Slider/Slider';
 import Form from './components/Form';
 import UserComments from './components/UserComments';
-import MoreCourses from './components/MoreCourses';
+import MoreCourses from './components/MoreCourses/MoreCourses';
 import RelatedArticles from './components/RelatedArticles';
 import Footer from './components/Footer';
 

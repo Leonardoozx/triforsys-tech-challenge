@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-
-import { commentsData } from '../api/commentsData';
+../../hooks/useGenericState
+import { commentsData } from '../../api/commentsData';
 
 import styles from '../styles/userComments.module.css';
 

@@ -1,11 +1,11 @@
-#mobile-section {
+.mobile_section {
   margin-bottom: 16px;
 }
 
-#mobile-section h3 {
+.mobile_section h3 {
   margin-bottom: 8px;
 }
 
-#mobile-section p {
+.mobile_section p {
   margin: 0 8px;
 }

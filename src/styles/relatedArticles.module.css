@@ -1,0 +1,38 @@
+.related_articles_title {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.articles_section {
+  margin-top: 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articles_section article {
+  margin: 8px;
+  width: 95%;
+}
+
+.articles_section h4 {
+  color: rgb(216, 215, 206);
+}
+
+.articles_section p {
+  margin-top: 5px;
+}
+
+
+.articles_section hr {
+  background-color: rgb(29, 26, 5);
+  border: none;
+  padding: 1px;
+  margin: 10px 0;
+}
+
+.articles_section button {
+  width: 240px;
+  font-size: 14px;
+}

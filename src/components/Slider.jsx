@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { sliderData } from '../api/sliderData';
 
-import '../styles/slider.css';
+import styles from '../styles/slider.module.css';
 
 export default function Slider() {
   const [images, setImages] = useState([]);
@@ -10,14 +10,13 @@ export default function Slider() {
   useEffect(() => {
     const getAllImages = async () => {
       const allImages = await sliderData();
-      console.log(allImages);
       setImages(allImages);
     };
     getAllImages();
   }, []);
 
   return (
-    <section className='slider'>
+    <section className={styles.slider}>
       {images &&
         images.map(({ order, image }) => (
           <section key={order}>

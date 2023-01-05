@@ -1,4 +1,4 @@
-import '../styles/form.css';
+import styles from '../styles/form.module.css';
 import useGenericState from '../hooks/useGenericState';
 
 export default function Form() {
@@ -45,7 +45,7 @@ export default function Form() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className={styles.form} onSubmit={onSubmit}>
       <h3>OBTÉN MÁS INFORMACIÓN</h3>
 
       <input
@@ -77,7 +77,7 @@ export default function Form() {
         name="telefono"
       />
 
-      <div className="label-container">
+      <div className={styles.label_container}>
         <label htmlFor="use-condition">
           <input
             onChange={setGenericState}

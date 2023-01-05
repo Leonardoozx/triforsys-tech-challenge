@@ -1,16 +1,16 @@
-.natacion-resumme-container {
+.natacion_resumme_container {
   display: flex;
   flex-direction: column-reverse;
   margin: 0 8px 25px 8px;
 }
 
-.natacion-resumme-container h3 {
+.natacion_resumme_container h3 {
   order: 1;
   width: 100%;
   text-align: center;
 }
 
-.natacion-resumme-container div {
+.natacion_resumme_container div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,10 +18,10 @@
   order: 2;
 }
 
-.natacion-resumme-container button {
+.natacion_resumme_container button {
   order: 3;
 }
 
-.natacion-resumme-container div figure {
+.natacion_resumme_container div figure {
   margin: 20px 0;
 }

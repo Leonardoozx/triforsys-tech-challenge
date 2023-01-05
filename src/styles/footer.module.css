@@ -1,4 +1,4 @@
-footer .cards_width {
+.footer .cards_width {
   width: 40px;
   margin: 0 5px;
 }
@@ -9,14 +9,18 @@ footer hr {
   padding: 1px;
 }
 
-footer .logo {
+.footer .logo {
   width: 90px;
   height: 25px;
 }
 
-footer .footer_logo {
+.footer .footer_logo {
   display: flex;
   justify-content: space-between;
+}
+
+.footer .title {
+  margin-top: 30px;
 }
 
 .terminos_y_condiciones {
@@ -32,4 +36,17 @@ footer .footer_logo {
 
 .cards_container {
   margin: 10px 0;
+}
+
+.whatsapp_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 35px 0 50px 0;
+}
+
+.whatsapp_container a {
+  width: 180px;
+  align-self: center;
+  margin-top: 10px;
 }

@@ -1,0 +1,31 @@
+.more_courses_title {
+  margin: 15px 0;
+}
+
+.more_courses_container,
+.more_courses_container .more_courses {
+  position: relative;
+}
+
+.more_courses_container img {
+  width: 95%;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.more_courses_container .teacher {
+  position: absolute;
+  bottom: 20%;
+  left: 4%;
+}
+
+.more_courses_container .what_teaches {
+  position: absolute;
+  bottom: 10%;
+  left: 4%;
+}
+
+.more_courses div {
+  display: flex;
+  gap: 5px;
+}

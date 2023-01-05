@@ -1,0 +1,32 @@
+.user_comments {
+  display: flex;
+  height: 200px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.user_comments section {
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.user_comments section div {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.user_comments .name, .user_comments .content {
+  color: black;
+}
+
+.user_comments .content {
+  text-align: start;
+  height: 100%;
+}
+
+.user_comments .name {
+  align-self: flex-end;
+}

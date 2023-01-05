@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,17 +9,17 @@ header {
   top: 0;
 }
 
-header #logo {
+.header .logo {
   display: flex;
 }
 
-header #logo img {
+.header .logo img {
   width: 90px;
   align-self: center;
   margin: 0 auto;
 }
 
-header .menu {
+.header .menu {
   display: flex;
   position: absolute;
   font-size: 0;
@@ -27,14 +27,14 @@ header .menu {
   top: 5px;
 }
 
-header .menu button {
+.header .menu button {
   align-self: center;
 }
 
-header .menu img {
+.header .menu img {
   width: 30px;
 }
 
-header .smaller-profile img {
+.header .smaller_profile img {
   width: 25px;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import './styles/app.css';
+import styles from './styles/app.module.css';
 
 import Header from './components/Header';
 import NatacionResumeInfo from './components/NatacionResumeInfo';
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <main>
       <Header />
-      <article className="main-img-container">
+      <article className={styles.main_img_container}>
         <img
           src={
             isMobile
@@ -41,7 +41,7 @@ export default function App() {
 
       <Slider />
 
-      <article className="cards">
+      <article className={styles.cards}>
         <img src="https://imgur.com/e71xbjD.png" alt="book" />
         <img src="https://imgur.com/BvZnyYY.png" alt="360" />
         <img src="https://imgur.com/9GRWsvM.png" alt="check cards" />
@@ -50,9 +50,9 @@ export default function App() {
         {!isMobile && <button>MAS INFROMACIÓN</button>}
       </article>
 
-      <h3 className="highlights-title">DESTAQUES DEL CURSO</h3>
+      <h3 className={styles.highlights_title}>DESTAQUES DEL CURSO</h3>
 
-      <section className="highlights">
+      <section className={styles.highlights}>
         <div>
           <h3>03</h3>
           <p className="c-grey">Bases biomecánicas de la natación</p>
@@ -89,7 +89,7 @@ export default function App() {
         VER PROGRAMA COMPLETO
       </button>
 
-      <section className="classification">
+      <section className={styles.classification}>
         <div>
           <img
             className="cards-width"
@@ -184,7 +184,7 @@ export default function App() {
 
           <h2>MÁS CURSOS</h2>
 
-          {/* <img src="https://imgur.com/K27y6Cy.png" alt="MÁS CURSOS" /> */}
+          <img src="https://imgur.com/K27y6Cy.png" alt="MÁS CURSOS" />
 
           <h2>OBTÉN MÁS INFORMACIÓN</h2>
 
@@ -294,13 +294,13 @@ export default function App() {
           </article>
 
           <article>
-            {/* backgroud image */}
-            {/* <article className="main-img-container">
-        <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
-        </article> */}
+            backgroud image
+            <article className="main-img-container">
+              <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
+            </article>
             <h2>APRENDE COM LOS MEJORES</h2>
             <h3>DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.</h3>
-            <h3>CONOCE EN NUESTRO BLOG.</h3> 
+            <h3>CONOCE EN NUESTRO BLOG.</h3>
           </article>
         </>
       )}

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-import '../styles/natacionResumeInfo.css';
+import styles from  '../styles/natacionResumeInfo.module.css';
 
 export default function NatacionResumeInfo({ isMobile }) {
   return (
-    <section className="natacion-resumme-container">
+    <section className={styles.natacion_resumme_container}>
       <div>
         <figure>
           <img

@@ -6,12 +6,12 @@
   margin-top: 25px;
 }
 
-.main-img-container {
+.main_img_container {
   margin-top: 35px;
   width: 100%;
 }
 
-.main-img-container img {
+.main_img_container img {
   width: 100%;
 }
 
@@ -19,7 +19,7 @@
   margin-bottom: 15px;
 }
 
-.highlights-title {
+.highlights_title {
   margin-top: 20px;
   margin-bottom: 10px;
 }

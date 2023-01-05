@@ -50,3 +50,14 @@ footer hr {
   align-self: center;
   margin-top: 10px;
 }
+
+@media screen and (min-width: 500px) {
+  .terminos_y_condiciones {
+    justify-content: space-around;
+  }
+
+  .footer .footer_logo {
+    justify-content: space-around;
+  }
+
+}

@@ -20,7 +20,7 @@
   flex-direction: column;
   text-align: start;
   gap: 10px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
 }
 
 .form .label_container label {

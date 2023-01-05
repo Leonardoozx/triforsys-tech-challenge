@@ -1,0 +1,29 @@
+.classification {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.classification div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.classification p {
+  text-align: start;
+}
+
+.classification div p {
+  text-align: start;
+  font-size: 12px;
+}
+
+.classification div img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}

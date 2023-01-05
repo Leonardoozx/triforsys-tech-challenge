@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { sliderData } from '../../api/sliderData';
 
-import styles from '../styles/slider.module.css';
+import styles from './slider.module.css';
 
 export default function Slider() {
   const [images, setImages] = useState([]);

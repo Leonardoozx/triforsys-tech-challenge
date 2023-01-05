@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from  '../styles/natacionResumeInfo.module.css';
+import styles from  './natacionResumeInfo.module.css';
 
 export default function NatacionResumeInfo({ isMobile }) {
   return (

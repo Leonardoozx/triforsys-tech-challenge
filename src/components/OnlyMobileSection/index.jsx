@@ -1,4 +1,4 @@
-import styles from '../styles/onlyMobileSection.module.css'
+import styles from './onlyMobileSection.module.css'
 
 export default function OnlyMobileSection() {
   return (

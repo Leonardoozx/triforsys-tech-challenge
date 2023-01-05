@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-../../hooks/useGenericState
 import { relatedArticlesData } from '../../api/relatedArticlesData';
 
-import styles from '../styles/relatedArticles.module.css';
+import styles from './relatedArticles.module.css';
 
 export default function RelatedArticles() {
   const [articles, setArticles] = useState([]);

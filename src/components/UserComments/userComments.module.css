@@ -1,18 +1,22 @@
 .user_comments {
   display: flex;
-  height: 200px;
-  overflow-y: hidden;
+  height: 220px;
   overflow-x: scroll;
+}
+
+.user_comments::-webkit-scrollbar {
+  display: none;
 }
 
 .user_comments section {
   background-color: white;
   margin: 10px;
   border-radius: 5px;
+    padding: 5px;
 }
 
 .user_comments section div {
-  width: 210px;
+  width: 230px;
   display: flex;
   flex-direction: column;
   height: 100%;

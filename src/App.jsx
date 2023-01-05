@@ -1,24 +1,30 @@
 import { useEffect, useState } from 'react';
 
-import styles from './styles/app.module.css';
+import styles from './app.module.css';
 
-import Header from './components/Header/Header';
-import NatacionResumeInfo from './components/NatacionResumeInfo/NatacionResumeInfo';
-import OnlyMobileSection from './components/OnlyMobileSection/OnlyMobileSection';
-import Slider from './components/Slider/Slider';
+import Header from './components/Header';
+import NatacionResumeInfo from './components/NatacionResumeInfo';
+import OnlyMobileSection from './components/OnlyMobileSection';
+import Slider from './components/Slider';
 import Form from './components/Form';
 import UserComments from './components/UserComments';
-import MoreCourses from './components/MoreCourses/MoreCourses';
+import MoreCourses from './components/MoreCourses';
 import RelatedArticles from './components/RelatedArticles';
 import Footer from './components/Footer';
+import Classification from './components/Classification';
+import Highlights from './components/Highlights';
 
 export default function App() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth < 720) return setIsMobile(true);
-    setIsMobile(false);
-  }, []);
+  const [isMobile, setIsMobile] = useState(true);
 
+  const handleResize = () => {
+    if (window.innerWidth < 769) return setIsMobile(true);
+  };
+
+  useEffect(() => {
+    console.log(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+  });
   return (
     <main>
       <Header />
@@ -50,62 +56,10 @@ export default function App() {
         {!isMobile && <button>MAS INFROMACIÓN</button>}
       </article>
 
-      <h3 className={styles.highlights_title}>DESTAQUES DEL CURSO</h3>
 
-      <section className={styles.highlights}>
-        <div>
-          <h3>03</h3>
-          <p className="c-grey">Bases biomecánicas de la natación</p>
-          <button onClick={() => console.log('More info')}>
-            <img src="https://imgur.com/kqpjTVI.png" alt="arrow" />
-          </button>
-        </div>
-        <div>
-          <h3>06</h3>
-          <p className="c-grey">Preparación física</p>
-          <button onClick={() => console.log('More info')}>
-            <img src="https://imgur.com/kqpjTVI.png" alt="arrow" />
-          </button>
-        </div>
-        <div>
-          <h3>08</h3>
-          <p className="c-grey">Nutrición y sumplementos</p>
-          <button onClick={() => console.log('More info')}>
-            <img src="https://imgur.com/kqpjTVI.png" alt="arrow" />
-          </button>
-        </div>
-        <div>
-          <h3>11</h3>
-          <p className="c-grey">Análisis de competición</p>
-          <button onClick={() => console.log('More info')}>
-            <img src="https://imgur.com/kqpjTVI.png" alt="arrow" />
-          </button>
-        </div>
-      </section>
-      <button
-        className="btn btn-bg-black"
-        onClick={() => console.log('VER PROGRAMA COMPLETO')}
-      >
-        VER PROGRAMA COMPLETO
-      </button>
+      <Highlights />
 
-      <section className={styles.classification}>
-        <div>
-          <img
-            className="cards-width"
-            src="https://imgur.com/6rMRbGY.png"
-            alt="star"
-          />
-          <p>
-            LOS ESTUDAINTES LE DAN A UNYCOS UNA CALFICACIÓN PROMEDIO DE 4.7 DE 5
-            ESTRELLAS.
-          </p>
-        </div>
-        <p className="c-grey">
-          100% de garantia de satisfacción. 30 días de garantia de devolución de
-          dinero.
-        </p>
-      </section>
+      <Classification />
 
       <Form />
 

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-../../hooks/useGenericState
 import { commentsData } from '../../api/commentsData';
 
-import styles from '../styles/userComments.module.css';
+import styles from './userComments.module.css';
 
 export default function UserCommnets() {
   const [comments, setComments] = useState([]);

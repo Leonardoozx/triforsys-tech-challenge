@@ -3,6 +3,10 @@
   overflow-x: scroll;
 }
 
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 .slider img {
   width: 200px;
 }

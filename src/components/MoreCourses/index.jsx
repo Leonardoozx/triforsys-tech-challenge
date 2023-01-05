@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { moreCoursesData } from '../../api/moreCoursesData.js';
 
-import styles from '../styles/moreCourses.module.css';
+import styles from './moreCourses.module.css';
 
 export default function MoreCourses() {
   const [courses, setCourses] = useState([]);

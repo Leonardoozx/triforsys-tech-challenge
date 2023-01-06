@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './footer.module.css';
 
 export default function Footer({ isMobile }) {
@@ -86,3 +88,7 @@ export default function Footer({ isMobile }) {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

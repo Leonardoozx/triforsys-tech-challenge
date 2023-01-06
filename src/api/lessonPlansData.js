@@ -1,3 +1,5 @@
+// simulating a lesson plans data fetching
+
 const lessonPlansData = () => {
   const lessonPlans = [
     {

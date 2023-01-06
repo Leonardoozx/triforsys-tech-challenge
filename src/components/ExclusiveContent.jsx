@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from '../app.module.css';
 
 export default function ExclusiveContent({ isMobile }) {
@@ -8,12 +10,25 @@ export default function ExclusiveContent({ isMobile }) {
       )}
 
       <article className={styles.cards}>
-        <div>
-          <img src="https://imgur.com/e71xbjD.png" alt="book" />
-          <img src="https://imgur.com/BvZnyYY.png" alt="360" />
-          <img src="https://imgur.com/9GRWsvM.png" alt="check cards" />
-          <img src="https://imgur.com/Aa7aQA8.png" alt="pencil" />
-        </div>
+        <section>
+          <div>
+            <img className='cards-width' src="https://imgur.com/e71xbjD.png" alt="book" />
+            <p>E-books</p>
+          </div>
+          <div>
+            {' '}
+            <img className='cards-width' src="https://imgur.com/BvZnyYY.png" alt="360" />
+            <p>360° Videos</p>
+          </div>
+          <div>
+            <img className='cards-width' src="https://imgur.com/9GRWsvM.png" alt="check cards" />
+            <p>Tests</p>
+          </div>
+          <div>
+            <img className='cards-width' src="https://imgur.com/Aa7aQA8.png" alt="pencil" />
+            <p>Tareas</p>
+          </div>
+        </section>
         {!isMobile ? (
           <button
             onClick={() => console.log('MORE INFORMATION')}
@@ -28,3 +43,7 @@ export default function ExclusiveContent({ isMobile }) {
     </>
   );
 }
+
+ExclusiveContent.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

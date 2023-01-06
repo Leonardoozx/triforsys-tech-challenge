@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  frontend:
+    container_name: triforsys-frontend
+    build: ./
+    ports:
+      - 9004:9004
+    working_dir: /app-frontend

@@ -1,4 +1,5 @@
 // simulating a related articles data fetching
+
 const relatedArticlesData = () => {
   const relatedArticles = [
     {

@@ -38,6 +38,7 @@
 
 .header .smaller_profile img {
   width: 25px;
+  background-color: black;
 }
 
 .header nav {

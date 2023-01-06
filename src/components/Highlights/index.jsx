@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from './highlights.module.css';
 
 export default function Highlights({ isMobile }) {
@@ -46,3 +48,7 @@ export default function Highlights({ isMobile }) {
     </>
   );
 }
+
+Highlights.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

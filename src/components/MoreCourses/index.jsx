@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { moreCoursesData } from '../../api/moreCoursesData.js';
 
@@ -34,3 +35,7 @@ export default function MoreCourses({ isMobile }) {
     </>
   );
 }
+
+MoreCourses.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

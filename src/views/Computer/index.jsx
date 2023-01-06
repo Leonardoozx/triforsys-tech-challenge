@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from '../../app.module.css';
 
 import Header from '../../components/Header';
@@ -64,3 +66,7 @@ export default function Computer({ isMobile }) {
     </>
   );
 }
+
+Computer.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+};

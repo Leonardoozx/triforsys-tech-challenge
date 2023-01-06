@@ -1,3 +1,5 @@
+// simulating a more courses data fetching
+
 const moreCoursesData = () => {
   const courses = [
     {

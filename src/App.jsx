@@ -6,6 +6,7 @@ import Mobile from './views/Mobile';
 export default function App() {
   const [isMobile, setIsMobile] = useState(true);
 
+  // some parts of the code does not appear on computer screens but appears on mobile and vice-versa, that's why this function and useEffect bellow
   const handleResize = () => {
     if (window.innerWidth > 768) return setIsMobile(false);
   };

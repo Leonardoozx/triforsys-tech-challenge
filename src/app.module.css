@@ -1,4 +1,8 @@
 /* mobile first */
+.exclusive_content_title {
+  display: none;
+}
+
 .cards {
   display: flex;
   width: 100%;
@@ -17,7 +21,8 @@
 
 @media screen and (min-width: 768px) {
   .exclusive_content_title {
-    margin: 20px 0;
+    margin: 40px 0;
+    display: block;
   }
 
   .main_img_container {

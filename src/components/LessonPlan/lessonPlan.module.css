@@ -22,7 +22,8 @@
 }
 
 .lesson_plan_title {
-  margin: 25px 0;
+  margin: 40px 0;
+  font-size: 30px;
 }
 
 .list_item {
@@ -30,6 +31,7 @@
   background-color: white;
   display: flex;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .list_item div {

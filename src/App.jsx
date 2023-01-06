@@ -1,21 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import styles from './app.module.css';
-
-import Header from './components/Header';
-import NatacionResumeInfo from './components/NatacionResumeInfo';
-import OnlyMobileSection from './components/OnlyMobileSection';
-import Slider from './components/Slider';
-import Form from './components/Form';
-import UserComments from './components/UserComments';
-import MoreCourses from './components/MoreCourses';
-import RelatedArticles from './components/RelatedArticles';
-import Footer from './components/Footer';
-import Classification from './components/Classification';
-import Highlights from './components/Highlights';
-import ExclusiveContent from './components/ExclusiveContent';
-import LessonPlan from './components/LessonPlan';
-import StudentsComments from './components/StudentsComments';
+import Computer from './views/Computer';
+import Mobile from './views/Mobile';
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(true);
@@ -29,71 +15,11 @@ export default function App() {
   });
   return (
     <main>
-      <Header isMobile={isMobile} />
-      <article className={styles.main_img_container}>
-        <img
-          src={
-            isMobile
-              ? 'https://imgur.com/S55Ipc2.png'
-              : 'https://imgur.com/c849jat.png'
-          }
-          alt="woman swimming"
-        />
-      </article>
-
-      <NatacionResumeInfo isMobile={isMobile} />
-
-      {isMobile && <OnlyMobileSection />}
-
-      <Slider />
-
-      <ExclusiveContent isMobile={isMobile} />
-
-      {!isMobile && <LessonPlan />}
-
-      <Highlights isMobile={isMobile} />
-
-      <Classification />
-
-      {!isMobile && <MoreCourses isMobile={isMobile} />}
-
-      <Form />
-
-      {!isMobile && (
-        <>
-          <StudentsComments />
-          <RelatedArticles />
-        </>
+      {isMobile ? (
+        <Mobile isMobile={isMobile} />
+      ) : (
+        <Computer isMobile={isMobile} />
       )}
-
-      <UserComments />
-
-      {isMobile && <MoreCourses isMobile={isMobile} />}
-
-      {isMobile && (
-        <>
-          <RelatedArticles />
-          <StudentsComments />
-        </>
-      )}
-
-      {!isMobile && (
-        <>
-          <article className={styles.footer_img_container}>
-            <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
-            <p className={styles.footer_first_p}>APRENDE CON LOS MEJORES</p>
-            <p className={styles.footer_second_p}>
-              DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.
-            </p>
-            <p className={styles.footer_third_p}>CONOCE EN NUESTRO BLOG</p>
-            <button className='btn btn-bg-black' onClick={() => alert('GOING TO BLOG')} type="button">
-              LER MÁS EN NUESTRO BLOG
-            </button>
-          </article>
-        </>
-      )}
-
-      <Footer isMobile={isMobile} />
     </main>
   );
 }

@@ -14,12 +14,12 @@ export default function Slider() {
       setImages(allImages);
     };
     getAllImages();
-  }, []);
+  }, [imageIndex]);
 
   return (
     <section className={styles.slider}>
       {images.length && (
-        <div>
+        <div className={styles.main_img}>
           <img src={images[imageIndex].image} alt="natación" />
         </div>
       )}

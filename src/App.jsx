@@ -13,21 +13,23 @@ import RelatedArticles from './components/RelatedArticles';
 import Footer from './components/Footer';
 import Classification from './components/Classification';
 import Highlights from './components/Highlights';
+import ExclusiveContent from './components/ExclusiveContent';
+import LessonPlan from './components/LessonPlan';
+import StudentsComments from './components/StudentsComments';
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(true);
 
   const handleResize = () => {
-    if (window.innerWidth < 769) return setIsMobile(true);
+    if (window.innerWidth > 768) return setIsMobile(false);
   };
 
   useEffect(() => {
-    console.log(window.innerWidth);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize());
   });
   return (
     <main>
-      <Header />
+      <Header isMobile={isMobile} />
       <article className={styles.main_img_container}>
         <img
           src={
@@ -41,223 +43,56 @@ export default function App() {
 
       <NatacionResumeInfo isMobile={isMobile} />
 
-      {!isMobile && <h2>CONTENIDO EXCLUSIVO</h2>}
-
       {isMobile && <OnlyMobileSection />}
 
       <Slider />
 
-      <article className={styles.cards}>
-        <img src="https://imgur.com/e71xbjD.png" alt="book" />
-        <img src="https://imgur.com/BvZnyYY.png" alt="360" />
-        <img src="https://imgur.com/9GRWsvM.png" alt="check cards" />
-        <img src="https://imgur.com/Aa7aQA8.png" alt="pencil" />
+      <ExclusiveContent isMobile={isMobile} />
 
-        {!isMobile && <button>MAS INFROMACIÓN</button>}
-      </article>
+      {!isMobile && <LessonPlan />}
 
-
-      <Highlights />
+      <Highlights isMobile={isMobile} />
 
       <Classification />
 
+      {!isMobile && <MoreCourses isMobile={isMobile} />}
+
       <Form />
-
-      <UserComments />
-
-      <MoreCourses />
-
-      <RelatedArticles />
 
       {!isMobile && (
         <>
-          <h2>LESSON PLAN</h2>
+          <StudentsComments />
+          <RelatedArticles />
+        </>
+      )}
 
-          <div>
-            <ul>
-              <li>
-                <h1>01</h1>
-                <h3>PRESENTACIÓN</h3>
-                <p>
-                  Mireia, nuestra campeona, te da la bienvenida al curso que te
-                  llevará a la cima de la natación. Conocerás su técnica, su
-                  entrenamiento y muchas cosas más de la mano de un equipo de
-                  profesionales de fama internacional.
-                </p>
-              </li>
-              <hr />
-              <li>
-                <h1>02</h1>
-                <h3>NATACIÓN: ASPECTOS GENERALES</h3>
-                <p>
-                  Mireia es una luchadora. Su afán de superación y su
-                  preparación tanto física como mental la han llevado a lo más
-                  alto en un deporte que para ella es un estilo de vida. Conoce
-                  de la mano de nuestra deportista de élite los beneficios de
-                  esta disciplina.
-                </p>
-              </li>
-              <hr />
-              <li>
-                <h1>03</h1>
-                <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h3>
-                <p>
-                  Mireia es una luchadora. Su afán de superación y su
-                  preparación tanto física como mental la han llevado a lo más
-                  alto en un deporte que para ella es un estilo de vida. Conoce
-                  de la mano de nuestra deportista de élite los beneficios de
-                  esta disciplina.
-                </p>
-              </li>
-              <hr />
-              <li>
-                <h1>04</h1>
-                <h3>BASES BIOMECÁNICAS DE LA NATACIÓN</h3>
-                <p>
-                  Una perfecta ejecución de estos estilos, unida al control y a
-                  la resistencia, te permitirá convertirte en un nadador
-                  interdisciplinar. Mireia y su equipo te enseñarán las claves y
-                  los secretos para dominarlos todos desde cero.
-                </p>
-              </li>
-              <hr />
-              <li>
-                <h1>05</h1>
-                <h3>VIAJRES Y SALTOS</h3>
-                <p>
-                  Una perfecta ejecución de estos estilos, unida al control y a
-                  la resistencia, te permitirá convertirte en un nadador
-                  interdisciplinar. Mireia y su equipo te enseñarán las claves y
-                  los secretos para dominarlos todos desde cero.
-                </p>
-              </li>
-              <hr />
-            </ul>
-            <button type="button">VER TODOS</button>
-          </div>
+      <UserComments />
 
-          <h2>MÁS CURSOS</h2>
+      {isMobile && <MoreCourses isMobile={isMobile} />}
 
-          <img src="https://imgur.com/K27y6Cy.png" alt="MÁS CURSOS" />
+      {isMobile && (
+        <>
+          <RelatedArticles />
+          <StudentsComments />
+        </>
+      )}
 
-          <h2>OBTÉN MÁS INFORMACIÓN</h2>
-
-          <div>
-            <h2>COMENTARIOS DE LOS ESTUDIANTES</h2>
-            <h3>98.7% DE VALORACIONES POSITIVAS</h3>
-            <span> / TOTAL DE 726 VALORACIONES</span>
-            <ul>
-              <li>
-                <figure>
-                  <img src="https://imgur.com/utuygmQ.png" alt="profile" />
-                  <figcaption>SAMUEL VIDAL</figcaption>
-                  <span>
-                    <img src="https://imgur.com/fMuWAwv.png" alt="thumbs up" />{' '}
-                    - hace 2 meses
-                  </span>
-                </figure>
-                <p>
-                  Ha sido un curso muy gratificante,en el que he podido aprender
-                  muchas cosas gracias a los grandes ponentes que han colaborado
-                  y aportado sus conocimientos. Ahora toca ponerse manos a la
-                  obra y poner en practica todo lo aprendido. Estoy muy
-                  orgulloso.
-                </p>
-              </li>
-              <hr />
-              <li>
-                <figure>
-                  <img src="https://imgur.com/JepEto3.png" alt="profile" />
-                  <figcaption>FRANCISCO JOSÉ SACEDO</figcaption>
-                  <span>
-                    <img src="https://imgur.com/fMuWAwv.png" alt="thumbs up" />{' '}
-                    - hace 3 meses
-                  </span>
-                </figure>
-                <p>
-                  Seguir creciendo como profesional es necesario pero si lo
-                  haces junto a tus ídolos se convierte en un placer. Gracias
-                  por esta experiencia y espero poder comentarlo en persona con
-                  sus protagonistas muy pronto.
-                </p>
-                <figure>
-                  <img src="https://imgur.com/xaCUIe9.png" alt="verified" />
-                  <figcaption>Equipo Unycos</figcaption>
-                  <span> - hace 3 meses</span>
-                </figure>
-              </li>
-              <hr />
-              <li>
-                <figure>
-                  <img src="https://imgur.com/FT0DPEG.png" alt="profile" />
-                  <figcaption>ANA MILENE GÓMEZ</figcaption>
-                  <span>
-                    <img src="https://imgur.com/fMuWAwv.png" alt="thumbs up" />{' '}
-                    - hace 3 meses
-                  </span>
-                </figure>
-                <p>Profundizar en el entrenamiento y proceso de enseñanza</p>
-                <figure>
-                  <img src="https://imgur.com/xaCUIe9.png" alt="verified" />
-                  <figcaption>Equipo Unycos</figcaption>
-                  <span> - hace 3 meses</span>
-                </figure>
-              </li>
-              <hr />
-            </ul>
-
-            <button type="button">VER MÁS</button>
-          </div>
-
-          <h2>ARTÍCULOS RELACIONADOS</h2>
-
-          <article>
-            <div>
-              <h3>CONSEJOS PARA NADADORES PRINCIPIANTES</h3>
-              <p>22.06.2019</p>
-            </div>
-
-            <div>
-              <h3>CONSEJOS PARA NADADORES PRINCIPIANTES</h3>
-              <p>22.06.2019</p>
-            </div>
-
-            <div>
-              <h3>¿Nadar es un buen método para adelgazar?</h3>
-              <p>22.06.2019</p>
-            </div>
-
-            <div>
-              <h3>
-                Recomendaciones para lograr que un niño venza el miedo al agua
-              </h3>
-              <p>22.06.2019</p>
-            </div>
-
-            <div>
-              <h3>Consejos para mejorar la técnica del estilo crol</h3>
-              <p>22.06.2019</p>
-            </div>
-
-            <div>
-              <h3>Como venzer el miedo al agua</h3>
-              <p>22.06.2018</p>
-            </div>
-
-            <button type="butotn">LER MÁS EN NUESTRO BLOG</button>
-          </article>
-
-          <article>
-            backgroud image
-            <article className="main-img-container">
-              <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
-            </article>
-            <h2>APRENDE COM LOS MEJORES</h2>
-            <h3>DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.</h3>
-            <h3>CONOCE EN NUESTRO BLOG.</h3>
+      {!isMobile && (
+        <>
+          <article className={styles.footer_img_container}>
+            <img src="https://imgur.com/jYXOoX2.png" alt="studio" />
+            <p className={styles.footer_first_p}>APRENDE CON LOS MEJORES</p>
+            <p className={styles.footer_second_p}>
+              DETRÁS DE CADA ÉXITO, HAY UNA HISTÓRIA.
+            </p>
+            <p className={styles.footer_third_p}>CONOCE EN NUESTRO BLOG</p>
+            <button className='btn btn-bg-black' onClick={() => alert('GOING TO BLOG')} type="button">
+              LER MÁS EN NUESTRO BLOG
+            </button>
           </article>
         </>
       )}
+
       <Footer isMobile={isMobile} />
     </main>
   );

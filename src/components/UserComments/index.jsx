@@ -16,7 +16,7 @@ export default function UserCommnets() {
 
   return (
     <>
-      <h4>COMENTÁRIOS DE USUÁRIOS</h4>
+      <h4 className={styles.user_comments_title}>COMENTÁRIOS DE USUÁRIOS</h4>
 
       <section className={styles.user_comments}>
         {comments?.map(({ content, name }, index) => (

@@ -7,16 +7,17 @@
   height: 40px;
   background-color: black;
   top: 0;
+  z-index: 100;
 }
 
 .header .logo {
   display: flex;
+  position: absolute;
 }
 
 .header .logo img {
   width: 90px;
-  align-self: center;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 .header .menu {
@@ -37,4 +38,34 @@
 
 .header .smaller_profile img {
   width: 25px;
+}
+
+.header nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .header .menu {
+    display: none;
+  }
+
+  .header nav {
+    display: flex;
+    position: absolute;
+    right: 8%;
+    gap: 8px;
+  }
+
+  .header nav p {
+    transition: 0.5s;
+    color: rgb(133,132,121);
+  }
+
+  .header nav p:hover {
+    color: white;
+  }
 }

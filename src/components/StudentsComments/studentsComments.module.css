@@ -1,0 +1,54 @@
+.students_comments_section {
+  width: 65%;
+  margin: 20px auto;
+}
+
+.students_comments_section hr {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.students_comments_section h2 {
+  margin: 15px 0;
+}
+
+.students_comments_title {
+  margin: 12px 0;
+}
+
+.comments_container {
+  display: flex;
+}
+
+.c_gold {
+  color: rgb(197, 175, 25);
+}
+
+.students_pics {
+  width: 85px;
+  margin: 1% 5px 0 5px;
+  height: 85px;
+}
+
+.comments_content_container {
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2%;
+  text-align: start;
+  width: 100%;
+}
+
+.comments_content_container div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.comments_content_container div img {
+  width: 25px;
+}
+
+.verified_pic {
+  width: 25px;
+}

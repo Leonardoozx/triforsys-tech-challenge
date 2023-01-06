@@ -14,3 +14,68 @@
 .main_img_container img {
   width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+  .exclusive_content_title {
+    margin: 20px 0;
+  }
+
+  .main_img_container {
+    margin-top: 35px;
+    width: 85%;
+    margin: 60px auto 40px auto;
+  }
+
+  .cards {
+    width: 60%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .cards div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .cards button {
+    width: 60%;
+    align-self: center;
+    margin-top: 15px;
+  }
+
+  .footer_img_container,
+  .footer_img_container img {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 250px;
+  }
+
+  .footer_img_container .footer_first_p {
+    top: 10%;
+    font-size: 30px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .footer_img_container .footer_second_p {
+    top: 35%;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .footer_img_container .footer_third_p {
+    top: 50%;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .footer_img_container button {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

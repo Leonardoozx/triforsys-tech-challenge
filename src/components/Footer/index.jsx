@@ -3,7 +3,7 @@ import styles from './footer.module.css';
 export default function Footer({ isMobile }) {
   return (
     <footer className={styles.footer}>
-      <h3 className={styles.title}>ÚNETE A LA COMUNIDAD</h3>
+      {isMobile && <h3 className={styles.title}>ÚNETE A LA COMUNIDAD</h3>}
       <div className={styles.cards_container}>
         <a
           href="https://www.facebook.com/somosUnycos/"
@@ -51,16 +51,18 @@ export default function Footer({ isMobile }) {
         </a>
         {!isMobile && <hr />}
       </div>
-      <div className={styles.whatsapp_container}>
-        <h3>¿Dudas? Contáctanos por whatsapp</h3>
-        <a
-          className="btn btn-bg-black"
-          href=" https://wa.me/34653467360"
-          target="_blank"
-        >
-          +34 653 46 73 60
-        </a>
-      </div>
+      {isMobile && (
+        <div className={styles.whatsapp_container}>
+          <h3>¿Dudas? Contáctanos por whatsapp</h3>
+          <a
+            className="btn btn-bg-black"
+            href=" https://wa.me/34653467360"
+            target="_blank"
+          >
+            +34 653 46 73 60
+          </a>
+        </div>
+      )}
       <div className={styles.footer_logo_container}>
         <div className={styles.terminos_y_condiciones}>
           <p className="c-grey">Terminos y condiciones</p>

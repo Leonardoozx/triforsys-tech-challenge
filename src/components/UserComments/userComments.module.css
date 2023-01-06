@@ -12,7 +12,7 @@
   background-color: white;
   margin: 10px;
   border-radius: 5px;
-    padding: 5px;
+  padding: 5px;
 }
 
 .user_comments section div {
@@ -22,7 +22,8 @@
   height: 100%;
 }
 
-.user_comments .name, .user_comments .content {
+.user_comments .name,
+.user_comments .content {
   color: black;
 }
 
@@ -33,4 +34,14 @@
 
 .user_comments .name {
   align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .user_comments {
+    display: none;
+  }
+
+  .user_comments_title {
+    display: none;
+  }
 }

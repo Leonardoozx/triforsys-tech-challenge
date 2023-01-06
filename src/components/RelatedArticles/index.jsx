@@ -22,7 +22,6 @@ export default function RelatedArticles() {
           <article key={index}>
             <h4>{title.toUpperCase()}</h4>
             <p className="c-grey">{date}</p>
-            {!(articles.length - 1 === index) && <hr />}
           </article>
         ))}
         <button

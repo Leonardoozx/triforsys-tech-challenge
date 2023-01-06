@@ -36,3 +36,27 @@
   width: 240px;
   font-size: 14px;
 }
+
+@media screen and (min-width: 768px) {
+  .related_articles_title {
+    font-size: 20px;
+    margin: 40px 0 20px 0;
+  }
+
+  .articles_section {
+    margin: 25px auto;
+    width: 70%;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-items: center;
+  }  
+
+  .articles_section article {
+    width: 46%;
+  }
+
+  .articles_section button {
+    margin-top: 20px;
+  }
+}

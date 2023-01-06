@@ -25,3 +25,24 @@
 .natacion_resumme_container div figure {
   margin: 20px 0;
 }
+
+@media screen and (min-width: 768px) {
+  .natacion_resumme_container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px;
+    width: 85%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .natacion_resumme_container div {
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .natacion_resumme_container button {
+    width: 30%;
+  }
+  
+}

@@ -47,35 +47,38 @@ export default function Form() {
   return (
     <form className={styles.form} onSubmit={onSubmit}>
       <h3>OBTÉN MÁS INFORMACIÓN</h3>
-
-      <input
-        value={genericState.name}
-        onChange={setGenericState}
-        name="name"
-        type="text"
-        placeholder="NOME COMPLETO"
-      />
-      <input
-        value={genericState.correoEletronico}
-        onChange={setGenericState}
-        type="text"
-        name="correoEletronico"
-        placeholder="CORREO ELECTRONÓNICO"
-      />
-      <input
-        value={genericState.pais}
-        onChange={setGenericState}
-        type="text"
-        name="pais"
-        placeholder="PAÍS/CÓDIGO PAÍS"
-      />
-      <input
-        value={genericState.telefono}
-        onChange={setGenericState}
-        type="text"
-        placeholder="TELÉFONO"
-        name="telefono"
-      />
+      <div className={styles.input_container}>
+        <input
+          value={genericState.name}
+          onChange={setGenericState}
+          name="name"
+          type="text"
+          placeholder="NOME COMPLETO"
+        />
+        <input
+          value={genericState.correoEletronico}
+          onChange={setGenericState}
+          type="text"
+          name="correoEletronico"
+          placeholder="CORREO ELECTRONÓNICO"
+        />
+      </div>
+      <div className={styles.input_container}>
+        <input
+          value={genericState.pais}
+          onChange={setGenericState}
+          type="text"
+          name="pais"
+          placeholder="PAÍS/CÓDIGO PAÍS"
+        />
+        <input
+          value={genericState.telefono}
+          onChange={setGenericState}
+          type="text"
+          placeholder="TELÉFONO"
+          name="telefono"
+        />
+      </div>
 
       <div className={styles.label_container}>
         <label htmlFor="use-condition">

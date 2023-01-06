@@ -1,6 +1,6 @@
 import styles from './highlights.module.css';
 
-export default function Highlights() {
+export default function Highlights({ isMobile }) {
   return (
     <>
       <h3 className={styles.highlights_title}>DESTAQUES DEL CURSO</h3>
@@ -35,12 +35,14 @@ export default function Highlights() {
           </button>
         </div>
       </section>
-      <button
-        className="btn btn-bg-black"
-        onClick={() => alert('see all the program')}
-      >
-        VER PROGRAMA COMPLETO
-      </button>
+      {isMobile && (
+        <button
+          className="btn btn-bg-black"
+          onClick={() => alert('see all the program')}
+        >
+          VER PROGRAMA COMPLETO
+        </button>
+      )}
     </>
   );
 }

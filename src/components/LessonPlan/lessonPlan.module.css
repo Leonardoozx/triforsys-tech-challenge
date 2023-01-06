@@ -1,0 +1,74 @@
+.lesson_plan_section {
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.lesson_plan_section hr {
+  width: 95%;
+  margin: 0 auto;
+  height: 1px;
+  margin-top: 2%;
+}
+
+.lesson_plan_section article:last-child hr {
+  border: none;
+}
+
+.lesson_plan_title {
+  margin: 25px 0;
+}
+
+.list_item {
+  list-style-type: none;
+  background-color: white;
+  display: flex;
+  padding: 10px;
+}
+
+.list_item div {
+  text-align: start;
+  width: 80%;
+}
+
+.list_item .list_item_number {
+  width: 10%;
+  text-align: end;
+  margin-right: 15px;
+  margin-top: 0.5%;
+  font-size: 40px;
+  font-weight: 100;
+  color: #858479;
+}
+
+.list_item .list_item_title {
+  margin-top: 2%;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+
+.list_item .list_item_title {
+  color: black;
+  font-weight: 100;
+}
+
+.list_item .list_item_content, .list_item .list_item_number {
+  color: rgb(133,132,121);
+}
+
+.lesson_plan_section button {
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+  width: 180px;
+  height: 40px;
+  align-self: center;
+  position: absolute;
+  bottom: 2%;
+}

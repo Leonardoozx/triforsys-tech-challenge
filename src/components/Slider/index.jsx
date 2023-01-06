@@ -6,6 +6,7 @@ import styles from './slider.module.css';
 
 export default function Slider() {
   const [images, setImages] = useState([]);
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const getAllImages = async () => {
@@ -17,14 +18,37 @@ export default function Slider() {
 
   return (
     <section className={styles.slider}>
-      {images &&
-        images.map(({ order, image }) => (
-          <section key={order}>
-            <div>
-              <img src={image} alt="people in the pool" />
-            </div>
-          </section>
-        ))}
+      {images.length && (
+        <div>
+          <img src={images[imageIndex].image} alt="natación" />
+        </div>
+      )}
+      <div className={styles.article_container}>
+        <article className={styles.exito}>
+          <h1>ENTRENAR PARA EL ÉXITO</h1>
+          <p>
+            Fusce sapien lectus, tincidunt scelerisque leo vitae, maximus
+            venenatis felis. Suspendisse potenti. Aenean tincidunt mauris et
+            euismod tincidunt. Aliquam erat volutpat. Cras eu feugiat diam.
+            Suspendisse potenti. Nunc faucibus vulputate neque.
+          </p>
+        </article>
+
+        <article className={styles.images_container}>
+          {images &&
+            images.map(({ order, image }, index) => (
+              <section key={order}>
+                <div>
+                  <img
+                    onClick={() => setImageIndex(index)}
+                    src={image}
+                    alt="people in the pool"
+                  />
+                </div>
+              </section>
+            ))}
+        </article>
+      </div>
     </section>
   );
 }
